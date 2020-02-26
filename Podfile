@@ -5,7 +5,7 @@ target "SignalR.Client.iOS" do
     use_frameworks!
     platform :ios, '8.0'
     
-    pod 'AFNetworking', '2.6.3'
+    pod 'AFNetworking', '2.6.3',  :subspecs => ['Reachability', 'Serialization', 'Security', 'NSURLSession', 'NSURLConnection']
     pod 'SocketRocket', '0.4.2'
     
     target "SignalR.Client.iOSTests" do
