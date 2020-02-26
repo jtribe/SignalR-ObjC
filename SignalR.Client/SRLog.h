@@ -36,13 +36,21 @@ static const int ddLogLevel = LOG_LEVEL_OFF;
 #define SRLogDebug(frmt, ...)   LOG_OBJC_MAYBE(LOG_ASYNC_DEBUG,   LOG_LEVEL_DEF, LOG_FLAG_DEBUG,   0, frmt, ##__VA_ARGS__)
 #define SRLogVerbose(frmt, ...) LOG_OBJC_MAYBE(LOG_ASYNC_VERBOSE, LOG_LEVEL_DEF, LOG_FLAG_VERBOSE, 0, frmt, ##__VA_ARGS__)
 
-#else
+#elseif defined ( SIGNAL_R_OBJC_LOG_ENABLED )
 
 #define SRLogError(frmt, ...)      do{ NSLog((frmt), ##__VA_ARGS__); } while(0)
 #define SRLogWarn(frmt, ...)       do{ NSLog((frmt), ##__VA_ARGS__); } while(0)
 #define SRLogInfo(frmt, ...)       do{ NSLog((frmt), ##__VA_ARGS__); } while(0)
 #define SRLogDebug(frmt, ...)      do{ NSLog((frmt), ##__VA_ARGS__); } while(0)
 #define SRLogVerbose(frmt, ...)    do{ NSLog((frmt), ##__VA_ARGS__); } while(0)
+
+#else
+
+#define SRLogError(frmt, ...)
+#define SRLogWarn(frmt, ...)
+#define SRLogInfo(frmt, ...)
+#define SRLogDebug(frmt, ...)
+#define SRLogVerbose(frmt, ...)
 
 #endif
 
