@@ -20,7 +20,7 @@
 //  DEALINGS IN THE SOFTWARE.
 //
 
-#import <AFNetworking/AFNetworking.h>
+#import <AFNetworking/AFNetworking-iOS-umbrella.h>
 #import "SRConnectionInterface.h"
 #import "SRConnectionExtensions.h"
 #import "SRExceptionHelper.h"
