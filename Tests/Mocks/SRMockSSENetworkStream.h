@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <AFNetworking/AFNetworking.h>
+#import <AFNetworking/AFURLRequestSerialization.h>
+#import <AFNetworking/AFHTTPRequestOperation.h>
 
 @interface SRMockSSENetworkStream : NSObject
 

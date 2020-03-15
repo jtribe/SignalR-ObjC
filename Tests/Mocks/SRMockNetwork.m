@@ -8,7 +8,8 @@
 
 #import "SRMockNetwork.h"
 #import <OCMock/OCMock.h>
-#import <AFNetworking/AFNetworking.h>
+#import <AFNetworking/AFURLRequestSerialization.h>
+#import <AFNetworking/AFHTTPRequestOperation.h>
 
 @implementation SRMockNetwork
 
